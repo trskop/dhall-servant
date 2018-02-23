@@ -1,0 +1,34 @@
+name: dhall-servant
+version: 0.1.0.0
+synopsis: Dhall mimetype support for Servant
+category: Data, Servant, Web
+description: |
+   Support for using Dhall configuration language as a HTTP request\/response
+   body with mimetype @application/x-dhall@.
+
+github: trskop/dhall-servant
+license: BSD3
+author: Peter Trško
+maintainer: peter.trsko@gmail.com
+copyright: (c) 2018 Peter Trško
+
+extra-source-files:
+  - README.md
+# - ChangeLog.md
+
+ghc-options:
+  - -Wall
+
+dependencies:
+  - base
+
+  - bytestring
+  - dhall
+  - http-media
+  - servant
+  - text
+  - text-format
+  - trifecta
+
+library:
+  source-dirs: src
