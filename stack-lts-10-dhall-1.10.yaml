@@ -1,0 +1,8 @@
+resolver: lts-10.6
+
+packages:
+  - .
+
+extra-deps:
+  - dhall-1.10.0
+  - prettyprinter-1.2.0.1
