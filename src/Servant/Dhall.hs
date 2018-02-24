@@ -26,7 +26,6 @@ import Data.Semigroup ((<>))
 import qualified Data.ByteString.Lazy as Lazy (ByteString)
 import qualified Data.ByteString.Lazy as Lazy.ByteString (toStrict)
 import qualified Data.Text.Buildable as Text.Builder (build)
-import qualified Data.Text.Lazy as Lazy (Text)
 import qualified Data.Text.Lazy.Encoding as Lazy.Text (decodeUtf8', encodeUtf8)
 import qualified Data.Text.Lazy.Builder as Text.Builder (toLazyText)
 import qualified Text.Trifecta.Delta as Trifecta (Delta(Directed))
@@ -36,11 +35,11 @@ import qualified Dhall
     , Type(Type, expected, extract)
     , auto
     )
-import qualified Dhall.Core as Dhall (Expr(Annot, Note), Path, normalize)
+import qualified Dhall.Core as Dhall (Expr(Annot, Note), normalize)
 import qualified Dhall.Context (empty)
 import qualified Dhall.Parser (ParseError(ParseError), Src(Src), exprFromText)
 import qualified Dhall.TypeCheck (typeWith)
-import Network.HTTP.Media ((//), (/:))
+import Network.HTTP.Media ((//))
 import Servant.API (Accept(..), {-MimeRender(..),-} MimeUnrender(..))
 
 
